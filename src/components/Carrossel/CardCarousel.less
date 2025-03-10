@@ -1,0 +1,118 @@
+// Variáveis
+@bg-dark: #121212;
+@text-white: #FFFFFF;
+@indicator-active: #FFFFFF;
+@indicator-inactive: rgba(255, 255, 255, 0.4);
+
+.experience-section {
+    width: 100%;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-container {
+    width: 85%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1rem;
+    margin-left: 40rem;
+    border-radius: 2rem;
+}
+
+.card-track {
+    display: flex;
+    gap: 1rem;
+    transition: transform 0.5s ease;
+}
+
+.carousel-card {
+    min-width: calc(16.666% - 0.67rem) !important;
+    margin-top: .30rem;
+    aspect-ratio: 2.5 / 1;
+    border-radius: 2rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+    }
+
+    .card-icon {
+        margin-bottom: 0.8rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 2rem;
+
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+
+    .indicator {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: @indicator-inactive;
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.3s ease;
+
+        &.active {
+            background-color: @indicator-active;
+            width: 28px;
+            border-radius: 6px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+    }
+}
+
+// Responsividade
+@media (max-width: 1280px) {
+    .carousel-card {
+        min-width: calc(50% - 0.5rem); // 2 cards em telas médias
+        aspect-ratio: 1.6 / 1;
+    }
+
+    .carousel-container {
+        margin-left: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        min-width: 100%; // 1 card em telas pequenas
+    }
+
+    .xp-heading {
+        text-align: center;
+        align-self: center;
+        margin-left: 0;
+    }
+}

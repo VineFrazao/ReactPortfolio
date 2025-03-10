@@ -1,0 +1,96 @@
+.experience-section {
+  width: 100%;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.carousel-container {
+  width: 85%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1rem;
+  margin-left: 40rem;
+  border-radius: 2rem;
+}
+.card-track {
+  display: flex;
+  gap: 1rem;
+  transition: transform 0.5s ease;
+}
+.carousel-card {
+  min-width: calc(16.666% - 0.67rem) !important;
+  margin-top: 0.3rem;
+  aspect-ratio: 2.5 / 1;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.carousel-card:hover {
+  transform: translateY(-5px);
+}
+.carousel-card .card-icon {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+}
+.carousel-card .card-icon img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+.carousel-card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.carousel-indicators {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.carousel-indicators .indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+.carousel-indicators .indicator.active {
+  background-color: #FFFFFF;
+  width: 28px;
+  border-radius: 6px;
+}
+.carousel-indicators .indicator:hover {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+@media (max-width: 1280px) {
+  .carousel-card {
+    min-width: calc(50% - 0.5rem);
+    aspect-ratio: 1.6 / 1;
+  }
+  .carousel-container {
+    margin-left: 0 !important;
+  }
+}
+@media (max-width: 480px) {
+  .carousel-card {
+    min-width: 100%;
+  }
+  .xp-heading {
+    text-align: center;
+    align-self: center;
+    margin-left: 0;
+  }
+}

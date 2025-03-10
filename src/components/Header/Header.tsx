@@ -14,7 +14,7 @@ function Header() {
         <nav className="navegacao">
           <NavLink to="/">Vinícius</NavLink>
           <NavLink to="/Educacao">Educação</NavLink>
-          <NavLink to="/Experiencia">Experiencia</NavLink>
+          <NavLink to="/Experiencia">Experiência</NavLink>
         </nav>
 
         <div className="links">
